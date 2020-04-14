@@ -1,12 +1,20 @@
-import React from 'react';
-import LandingPage from './components/LandingPage';
-
+import React from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import LandingPage from "./components/LandingPage";
+import Servicii from "./components/Servicii";
 
 function App() {
   return (
-    <div className="App">
-      <LandingPage />
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path="/">
+          <LandingPage />
+        </Route>
+        <Route exact path="/servicii">
+          <Servicii />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 

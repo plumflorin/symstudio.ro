@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from "react-router-dom";
 
 const AppNavbar = () => {
 
@@ -23,11 +24,10 @@ const AppNavbar = () => {
                     <div id="top-menu" style={{display: menu}}>
                         <a href="/" className="logo">Sym Studio</a>
                         <div className="menu-right">
-                            <a href="/">Home</a>
-                            <a href="/test">Servicii</a>
-                            <a href="/test">Tarife</a>
-                            <a href="/test">Contact</a>
-                            <a href="/test">Despre Noi</a>
+                            <Link to="/">Home</Link>
+                            <Link to="/servicii">Servicii</Link>
+                            <a href="#contact">Contact</a>
+                            <Link to="/test">Despre Noi</Link>
                         </div>                
                     </div>
                     <button id="hamburger" onClick={togleMenu}>
