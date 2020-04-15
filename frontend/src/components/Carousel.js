@@ -1,12 +1,13 @@
 import React from "react";
 import { Carousel } from "react-responsive-carousel";
+import AOS from "aos"
 
 const Mycarousel = () => {
 
-
+    AOS.init({ duration : 1000 });
 
 return (
-    <div className="carousel-container">
+    <div data-aos="zoom-in" data-aos-offset="500" className="carousel-container">
         <Carousel showThumbs={false} autoPlay infiniteLoop={true} stopOnHover swipeable dynamicHeight={true} centerSlidePercentage={50} showStatus={false}>
                 <div>
                     <img src="img/beauty2.jpg" alt="" />

@@ -1,7 +1,8 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import LandingPage from "./components/LandingPage";
 import Servicii from "./components/Servicii";
+import Error404 from "./components/404.js";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route exact path="/servicii">
           <Servicii />
         </Route>
+        <Error404 />
       </Switch>
     </Router>
   );

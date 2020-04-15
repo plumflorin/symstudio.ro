@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from "react-router-dom";
+import AOS from "aos"
 
 const AppNavbar = () => {
 
@@ -17,9 +18,11 @@ const AppNavbar = () => {
                 setMenu("block")
             }
         }
+
+        AOS.init({ duration : 1000});
     
         return (
-            <div className="header">
+            <div data-aos="fade-down" className="header">
                 <div className="wrapper">
                     <div id="top-menu" style={{display: menu}}>
                         <a href="/" className="logo">Sym Studio</a>

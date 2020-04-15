@@ -1,11 +1,14 @@
 import React from 'react'
-
+import AOS from "aos"
 
 
 const MainPage = () => {
+
+    AOS.init({ duration : 1000});
+
     return (
         <>
-            <div className="middle wrapper-wide">
+            <div data-aos="zoom-in" className="middle wrapper-wide">
                 <div className="left">
                     <div className="skewback">
                         <div className="center">
@@ -23,7 +26,7 @@ const MainPage = () => {
                     </div>
                 </div>
             </div>
-            <div className="contact-area">
+            <div data-aos="fade-up" className="contact-area">
                 <div className="contact-text-area">
                     <i className="material-icons md-inactive">near_me</i>
                     <p>Adresa: Bulevard Tomis nr. 222 bl ST12 900497 Constanța</p>
@@ -53,7 +56,7 @@ const MainPage = () => {
                 </div>
             </div>
             <div className="despre">
-                <div className="despre__text">
+                <div data-aos="fade-right" className="despre__text">
                     <h3>Sym Studio Salon Constanta</h3>
                     <p>Frumusețea exterioară se îmbină cu cea interioară.
 
@@ -66,7 +69,7 @@ const MainPage = () => {
                         Apollo se mândrește cu o echipă de profesioniști care sunt întotdeauna bucuroși să vă ofere sfaturi și
                         să vă recomande produse de îngrijire.</p>
                 </div>
-                <div className="despre__imagine">
+                <div data-aos="fade-left" className="despre__imagine">
                     <div className="despre__img-wrap">
                         <img src="img/1.jpg" alt=""></img>
                     </div>
